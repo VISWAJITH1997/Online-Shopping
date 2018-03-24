@@ -5,160 +5,147 @@
 
 <spring:url var="css" value="/resources/css" />
 <spring:url var="js" value="/resources/js" />
-<spring:url var="images" value="/resources/images" />
+<spring:url var="img" value="/resources/images" />
 
 
 <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Universal - ${title}</title>
+<script>
+	window.menu = ${title};
+</script>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<!-- Bootstrap CSS-->
+<link rel="stylesheet" href="${css}/bootstrap.min.css">
+<!-- Font Awesome CSS-->
+<link rel="stylesheet" href="${css}/font-awesome.min.css">
+<!-- Google fonts - Roboto-->
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Roboto:300,400,700">
+<!-- Bootstrap Select-->
+<link rel="stylesheet" href="${css}/bootstrap-select.min.css">
+<!-- owl carousel-->
+<link rel="stylesheet" href="${css}/owl.carousel.css">
+<link rel="stylesheet" href="${css}/owl.theme.default.css">
+<!-- theme stylesheet-->
+<link rel="stylesheet" href="${css}/style.default.css"
+	id="theme-stylesheet">
+<!-- Custom stylesheet - for your changes-->
+<link rel="stylesheet" href="${css}/custom.css">
 
-    <title>Business Frontpage - Start Bootstrap Template</title>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
 
-    <!-- Bootstrap core CSS -->
-    <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="${css}/business-frontpage.css" rel="stylesheet">
+<!-- Favicon and apple touch icons-->
+<link rel="shortcut icon" href="${img}/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="${img}/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="57x57"
+	href="${img}/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="72x72"
+	href="${img}/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76"
+	href="${img}/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114"
+	href="${img}/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120"
+	href="${img}/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144"
+	href="${img}/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152"
+	href="${img}/apple-touch-icon-152x152.png">
+<!-- Tweaks for older IEs-->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+	<div class="wrapper">
 
-    <!-- Header with Background Image -->
-    <header class="business-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h1 class="display-3 text-center text-white mt-4">Business Name or Tagline</h1>
-          </div>
-        </div>
-      </div>
-    </header>
+		<div id="all">
 
-    <!-- Page Content -->
-    <div class="container">
+			<!-- ====== Top bar ====== -->
+			<%@ include file="./shared/topbar.jsp"%>
 
-      <div class="row">
-        <div class="col-sm-8">
-          <h2 class="mt-4">What We Do</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</p>
-          <p>
-            <a class="btn btn-primary btn-lg" href="#">Call to Action &raquo;</a>
-          </p>
-        </div>
-        <div class="col-sm-4">
-          <h2 class="mt-4">Contact Us</h2>
-          <address>
-            <strong>Start Bootstrap</strong>
-            <br>3481 Melrose Place
-            <br>Beverly Hills, CA 90210
-            <br>
-          </address>
-          <address>
-            <abbr title="Phone">P:</abbr>
-            (123) 456-7890
-            <br>
-            <abbr title="Email">E:</abbr>
-            <a href="mailto:#">name@example.com</a>
-          </address>
-        </div>
-      </div>
-      <!-- /.row -->
+			<!-- ====== Navbar Start ====== -->
+			<%@ include file="./shared/navbar.jsp"%>
 
-      <div class="row">
-        <div class="col-sm-4 my-4">
-          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/300x200" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 my-4">
-          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/300x200" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 my-4">
-          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/300x200" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
-        </div>
+			<!-- ======= Page Content ====== -->
+			<div class="content">
 
-      </div>
-      <!-- /.row -->
+				<c:if test="${userClickHome == true}">
+					<!-- Home Page Content -->
+					<%@ include file="home.jsp"%>
+				</c:if>
 
-    </div>
-    <!-- /.container -->
+				<c:if test="${userClickBlog == true}">
+					<!-- Blog Page Content -->
+					<%@ include file="blog.jsp"%>
+				</c:if>
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
-      </div>
-      <!-- /.container -->
-    </footer>
+				<c:if test="${userClickShop == true}">
+					<!-- Shop Page Content -->
+					<%@ include file="shop.jsp"%>
+				</c:if>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="${js}/jquery.min.js"></script>
-    <script src="${js}/bootstrap.bundle.min.js"></script>
+				<c:if test="${userClickServices == true}">
+					<!-- Services Page Content -->
+					<%@ include file="services.jsp"%>
+				</c:if>
 
-  </body>
+				<c:if test="${userClickContact == true}">
+					<!-- Contact Page Content -->
+					<%@ include file="contact.jsp"%>
+				</c:if>
+
+			</div>
+			<!-- ======= END Page Content ======= -->
+
+
+			<!-- ====== Footer Bar ====== -->
+			<%@ include file="./shared/footer.jsp"%>
+
+		</div>
+		<!-- Javascript files-->
+		<script src="${js}/jquery.min.js"></script>
+		<script src="${js}/popper.min.js">
+			
+		</script>
+		<script src="${js}/bootstrap.min.js"></script>
+		<script src="${js}/jquery.cookie.js">
+			
+		</script>
+		<script src="${js}/jquery.waypoints.min.js">
+			
+		</script>
+		<script src="${js}/jquery.counterup.min.js">
+			
+		</script>
+		<script src="${js}/owl.carousel.min.js"></script>
+		<script src="${js}/owl.carousel2.thumbs.min.js"></script>
+		<script src="${js}/jquery.parallax-1.1.3.js"></script>
+		<script src="${js}/bootstrap-select.min.js"></script>
+		<script src="${js}/jquery.scrollTo.min.js"></script>
+		<script src="${js}/front.js"></script>
+		<!-- My Custom Javascript file -->
+		<script src="${js}/myCustomScript.js"></script>
+	</div>
+
+</body>
 
 </html>
