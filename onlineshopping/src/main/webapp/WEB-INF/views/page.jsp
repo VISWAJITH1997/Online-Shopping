@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
@@ -7,7 +7,7 @@
 <spring:url var="js" value="/resources/js" />
 <spring:url var="img" value="/resources/images" />
 
-
+<!-- setting the root location -->
 <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 
 
@@ -20,7 +20,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Universal - ${title}</title>
 <script>
-	window.menu = ${title};
+	window.menu = '${title}';
 </script>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -98,11 +98,11 @@
 					<%@ include file="blog.jsp"%>
 				</c:if>
 
-				<c:if test="${userClickShop == true}">
-					<!-- Shop Page Content -->
-					<%@ include file="shop.jsp"%>
+				<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
+					<!-- Shopping Page Content -->
+					<%@ include file="listProducts.jsp"%>
 				</c:if>
-
+				
 				<c:if test="${userClickServices == true}">
 					<!-- Services Page Content -->
 					<%@ include file="services.jsp"%>
@@ -112,7 +112,7 @@
 					<!-- Contact Page Content -->
 					<%@ include file="contact.jsp"%>
 				</c:if>
-
+				
 			</div>
 			<!-- ======= END Page Content ======= -->
 
@@ -149,3 +149,4 @@
 </body>
 
 </html>
+    

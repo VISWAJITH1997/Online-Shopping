@@ -4,7 +4,7 @@
 			<div class="col-md-7">
 				<h1 class="h2">Contact</h1>
 			</div>
-			<div class="col-md-5" background = ${img}/texture-bw.png>
+			<div class="col-md-5"> <!-- "${img}/texture-bw.png" -->
 				<ul class="breadcrumb d-flex justify-content-end">
 					<li class="breadcrumb-item"><a href="index.html">Home</a></li>
 					<li class="breadcrumb-item active">Contact</li>

@@ -15,6 +15,12 @@
 
 
 	<dependencies>
+		<!-- Link Backend Project -->
+		<dependency>
+			<groupId>net.visu</groupId>
+			<artifactId>shoppingBackend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- java EE-API -->
 		<dependency>
 			<groupId>javax</groupId>
@@ -39,10 +45,18 @@
 		</dependency>
 
 		<!-- JSTL-API -->
+
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+
 		<dependency>
 			<groupId>javax.servlet.jsp.jstl</groupId>
 			<artifactId>jstl-api</artifactId>
 			<version>1.2</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- JSTL -->

@@ -2,6 +2,9 @@ $(function() {
 
 	switch (menu) {
 
+	case 'Home':
+		$('#home').addClass('nav-item active');
+		break;
 	case 'Blog':
 		$('#blog').addClass('nav-item active');
 		break;
@@ -15,7 +18,8 @@ $(function() {
 		$('#contact').addClass('nav-item active');
 		break;
 	default:
-		$('#home').addClass('nav-item active');
+		$('#shop').addClass('nav-item active');
+		$('#a_'+menu).addClass('active');
 		break;
 	}
 })
